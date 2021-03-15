@@ -1,0 +1,50 @@
+@import ../../assets/sass/globals
+
+.not-found
+  +flex(column, center, center)
+
+  height: 70vh
+
+  p
+    font-size: $text-2xl
+    margin-top: $spacing-simple
+    text-align: center
+
+  h3
+    font-size: $text-4xl
+    margin-top: $spacing-simple
+
+  img
+    margin-top: $spacing-double
+
+@media screen and (max-width: 768px)
+  .not-found
+    p
+      font-size: $text-xl
+      margin-top: $spacing-simple
+      text-align: center
+
+    h3
+      font-size: $text-2xl
+      margin-top: $spacing-simple
+      text-align: center
+
+    img
+      margin-top: $spacing-double
+      text-align: center
+
+@media screen and (max-width: 460px)
+  .not-found
+    p
+      font-size: $text-lg
+      margin-top: $spacing-simple
+      text-align: center
+
+    h3
+      font-size: $text-xl
+      margin-top: $spacing-simple
+      text-align: center
+
+    img
+      margin-top: $spacing-double
+      text-align: center

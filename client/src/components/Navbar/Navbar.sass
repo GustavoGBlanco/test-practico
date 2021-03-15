@@ -1,0 +1,54 @@
+@import ../../assets/sass/globals
+
+.navbar
+  +flex(row, center, center)
+
+  width: 90%
+  padding: 10px
+  margin: 0 auto
+
+  .logo
+    margin-right: $spacing-double
+
+  .searchForm
+    +flex(row, center, inherit)
+
+    width: 85%
+
+    input
+      font-family: "Roboto", sans-serif
+
+    .searchBox
+      width: 100%
+      padding: 10px
+      border: none
+      border-radius: $rounded 0 0 $rounded
+      font-size: $text-lg
+      flex-grow: 2
+
+      &:focus-within
+        outline: 0px
+
+    .searchIconContainer
+      background-color: $background
+
+      // height: 100%;
+      border-radius: 0 $rounded $rounded 0
+      padding: 9.5px
+
+      .searchIcon
+        vertical-align: middle
+
+@media screen and (max-width: 390px)
+  .navbar
+    flex-wrap: wrap
+
+    .logo
+      margin-bottom: $spacing-simple
+
+    .searchForm
+      .searchBox
+        font-size: $text-sm
+
+      .searchIconContainer
+        padding: 7.5px

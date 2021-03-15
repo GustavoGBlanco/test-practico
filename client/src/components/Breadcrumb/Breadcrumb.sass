@@ -1,0 +1,30 @@
+@import ../../assets/sass/globals
+
+.breadcrumb
+  width: 80%
+  margin: 0 auto
+
+  +flex(row, flex-start, flex-start)
+
+  min-height: 10px
+  padding: $spacing-simple 0
+  background-color: $background
+  color: $gray
+  font-size: $text-sm
+
+  .breadcrumb-box
+    .wrapper
+      margin: 0 10px
+
+  .last-category
+    font-weight: bold
+
+@media screen and (max-width: 460px)
+  .breadcrumb
+    width: 95%
+    margin-left: $spacing-simple
+    font-size: 10px
+
+    .breadcrumb-box
+      .wrapper
+        margin: 0 3px

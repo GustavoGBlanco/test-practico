@@ -1,0 +1,120 @@
+@import ../../assets/sass/globals
+
+.items-box
+  position: relative
+
+  &:after
+    content: ""
+    width: 95%
+    height: 2px
+    background-color: $background
+    position: absolute
+    bottom: 0
+    left: 3%
+
+  .card-item
+    +flex(row, space-between, flex-start)
+    +hover
+
+    cursor: pointer
+
+    &:hover
+      box-shadow: 0px 0px 10px 5px $background
+
+    .content
+      +flex(row, flex-start, center)
+
+      width: 80%
+
+      .properties
+        +flex(column, flex-start, flex-start)
+
+        height: 100%
+
+        .headline
+          +flex(row, center, center)
+
+          margin-bottom: $spacing-double
+
+          .price
+            font-size: $text-xl
+            font-weight: normal
+
+          .icon
+            width: 22px
+            margin-left: $spacing-simple
+            padding-top: 2px
+
+      .thumbnail
+        padding: $spacing-simple
+        width: $sz-small
+        height: $sz-small
+        border-radius: $rounded
+
+      .short-description
+        font-size: $text-lg
+        width: 80%
+        font-weight: normal
+
+    .address
+      font-size: $text-xs
+      color: $light-gray
+      font-weight: 600
+      padding-right: 46px
+      width: 20%
+      padding-top: 46px
+      text-align: left
+
+@media screen and (max-width: 720px)
+  .items-box
+    .card-item
+      .content
+        .properties
+          .headline
+            .price
+              font-size: $text-lg
+              font-weight: normal
+
+        .thumbnail
+          width: 120px
+          height: 120px
+
+        .short-description
+          font-size: $text-sm
+
+@media screen and (max-width: 320px)
+  .items-box
+    .card-item
+      padding-top: $spacing-simple
+      flex-direction: column
+      align-items: center
+
+      .content
+        flex-direction: column
+        align-items: center
+
+        .properties
+          flex-direction: column
+          align-items: center
+
+          .headline
+            .price
+              font-size: $text-lg
+              font-weight: normal
+
+        .thumbnail
+          width: 150px
+          height: 150px
+
+        .short-description
+          text-align: center
+
+      .address
+        font-size: $text-xs
+        color: $light-gray
+        padding-top: $spacing-double
+        padding-right: 0
+        font-weight: 600
+        width: 50%
+        text-align: center
+        margin-bottom: $spacing-double

@@ -1,0 +1,15 @@
+=flex($dir, $justify, $align)
+  display: flex
+  flex-direction: $dir
+  justify-content: $justify
+  align-items: $align
+
+=grid
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+
+=grid-column($col)
+  grid-column: span $col
+
+=hover
+  transition: ease-in-out 0.3s

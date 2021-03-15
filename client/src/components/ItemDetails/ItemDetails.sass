@@ -1,0 +1,139 @@
+@import ../../assets/sass/globals
+
+.container
+  +flex(column, center, space-between)
+
+  width: 80%
+  margin: 0 auto
+  background-color: $white
+  border-radius: $rounded
+
+  .content
+    +flex(row, space-between, flex-start)
+
+    .picture
+      padding: $spacing-simple
+      border-radius: $rounded-xl
+      max-width: $sz-large
+
+    .properties
+      padding: $spacing-double $spacing-double 0 0
+      text-align: left
+      width: 350px
+
+      .condition
+        font-size: $text-sm
+        margin-bottom: $spacing-simple
+
+      .item-headline
+        font-size: $text-xl
+
+      .price
+        font-size: $text-4xl
+        font-weight: 500
+        margin: $spacing-double 0
+        display: flex
+        align-items: center
+
+        .decimals
+          font-size: $text-xl
+          margin-left: 2px
+          font-weight: 400
+          margin-bottom: 10px
+
+      .btn
+        width: 100%
+        padding: 15px 15px
+        background-color: $light-blue
+        color: $white
+        border: none
+        border-radius: $rounded
+        cursor: pointer
+        font-size: $text-md
+
+        &:hover
+          background-color: $dark-blue
+
+          +hover
+
+  .description
+    padding: $spacing-double
+    width: 85%
+
+    .description-headline
+      font-size: $text-2xl
+      font-weight: 600
+
+    .description-body
+      margin-top: $spacing-double
+      font-size: $text-md
+      color: $gray
+
+@media screen and (min-width: 920px)
+  .container
+    .content
+      .picture
+        min-width: 680px
+
+@media screen and (max-width: 1200px)
+  .container
+    .content
+      .picture
+        min-width: 320px
+
+@media screen and (max-width: 780px)
+  .container
+    .content
+      .picture
+        min-width: 180px
+
+      .properties
+        padding: $spacing-simple $spacing-simple 0 0
+        width: 250px
+
+        .condition
+          font-size: $text-xs
+          margin-bottom: $spacing-simple
+
+        .item-headline
+          font-size: $text-lg
+
+        .price
+          font-size: $text-xl
+          margin: $spacing-simple 0
+
+@media screen and (max-width: 580px)
+  .container
+    width: 90%
+
+    .content
+      flex-wrap: wrap
+      justify-content: center
+
+      .picture
+        min-width: 250px
+
+      .properties
+        margin: 0 auto
+        padding: $spacing-simple
+
+        .condition
+          font-size: $text-xs
+          margin-bottom: $spacing-simple
+
+        .item-headline
+          font-size: $text-lg
+
+        .price
+          font-size: $text-xl
+          margin: $spacing-simple 0
+
+    .description
+      width: 100%
+
+      .description-headline
+        font-size: $text-xl
+
+      .description-body
+        font-size: $text-sm
+        text-align: justify
